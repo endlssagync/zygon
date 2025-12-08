@@ -6,8 +6,6 @@ import { CustomersSection } from './components/ui/customers-section';
 import { Services } from './components/organisms/Services';
 import { About } from './components/organisms/About';
 import { TalentShowcase } from './components/organisms/TalentShowcase';
-import { Process } from './components/organisms/Process';
-import { Contact } from './components/organisms/Contact';
 import { Footer } from './components/organisms/Footer';
 import { Talent } from './components/organisms/Talent';
 
@@ -62,8 +60,6 @@ function HomePage() {
       <Services />
       <TalentShowcase />
       <About />
-      <Process />
-      <Contact />
     </>
   );
 }
