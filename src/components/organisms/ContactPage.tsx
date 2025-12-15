@@ -164,7 +164,7 @@ export const ContactPage: React.FC = () => {
 
           {/* Contact Form and Image Layout */}
           <div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start hidden"
             style={{
               animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards',
               opacity: 0,

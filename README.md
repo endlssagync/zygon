@@ -109,6 +109,24 @@ The project uses a hybrid approach:
    npm run preview
    ```
 
+## 🚀 Deployment
+
+### SPA Routing Configuration
+
+This project uses client-side routing with React Router. To ensure all routes work correctly when refreshing or accessing directly, the following configuration files are included:
+
+- **`vercel.json`** - Configures Vercel to serve `index.html` for all routes
+- **`public/_redirects`** - Configures Netlify to redirect all routes to `index.html`
+
+These files ensure that when users navigate to routes like `/talent` or `/contact` and refresh the page, they won't encounter 404 errors. The server will serve the `index.html` file, and React Router will handle the routing on the client side.
+
+### Deployment Platforms
+
+The project is configured to work with:
+- **Vercel** (primary) - Uses `vercel.json` for routing
+- **Netlify** - Uses `public/_redirects` for routing
+- **Other platforms** - May require similar server configuration to serve `index.html` for all routes
+
 ## 📦 Component Architecture
 
 ### Atomic Design Principles
