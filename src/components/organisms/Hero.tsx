@@ -55,7 +55,15 @@ export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
                 opacity: 0,
               }}
             >
-              <SocialProof userCount={500} />
+              <SocialProof 
+                userCount={496}
+                avatars={[
+                  { src: '/creators/davidvlogz_yt.jpg', alt: 'DavidVlogz' },
+                  { src: '/creators/derqrodriguez.jpg', alt: 'Derq Rod' },
+                  { src: '/creators/edgarcito.jpg', alt: 'Ed Garcito' },
+                  { src: '/creators/Chino.jpg', alt: 'Chino' },
+                ]}
+              />
             </div>
           </div>
 
