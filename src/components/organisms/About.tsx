@@ -54,8 +54,8 @@ export const About: React.FC<AboutProps> = ({ className = '' }) => {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="space-y-16 lg:space-y-24">
           {/* Top Container - Trusted by text and Logos */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Left Column - Trusted by text */}
+          {/* Temporarily hidden until brand logos are ready */}
+          {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             <div className="space-y-4">
               <h3
                 className="text-xl md:text-2xl font-light animate-fade-in-up"
@@ -75,7 +75,6 @@ export const About: React.FC<AboutProps> = ({ className = '' }) => {
               </p>
             </div>
 
-            {/* Middle Column - Logos */}
             <div
               className="space-y-6"
               style={{
@@ -90,7 +89,6 @@ export const About: React.FC<AboutProps> = ({ className = '' }) => {
               ))}
             </div>
 
-            {/* Right Column - Logos */}
             <div
               className="space-y-6"
               style={{
@@ -104,7 +102,7 @@ export const About: React.FC<AboutProps> = ({ className = '' }) => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Bottom Container - Main content and Features */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">

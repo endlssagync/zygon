@@ -55,7 +55,8 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <CustomersSection customers={customers} />
+      {/* Temporarily hidden until brand logos are ready */}
+      {/* <CustomersSection customers={customers} /> */}
       <Services />
       <TalentShowcase />
       <About />
