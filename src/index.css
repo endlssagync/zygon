@@ -23,6 +23,18 @@
     background-color: #0A0A0A;
     min-height: 100vh;
   }
+
+  /* Input placeholder styling */
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+  }
+
+  input:focus::placeholder,
+  textarea:focus::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @layer utilities {

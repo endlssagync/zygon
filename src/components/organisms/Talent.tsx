@@ -132,6 +132,14 @@ export const Talent: React.FC = () => {
   // Calculate total followers
   const totalFollowers = creators.reduce((sum, creator) => sum + creator.followers, 0);
 
+  // Array of colors for hover borders - cycling through red, green, blue, yellow
+  const hoverBorderColors = [
+    '#EF4444', // red
+    '#10B981', // green
+    '#0EA5E9', // blue
+    '#FACC15', // yellow
+  ];
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#0A0A0A', color: '#FFFFFF' }}>
       <Header />
@@ -189,6 +197,7 @@ export const Talent: React.FC = () => {
                   image={creator.image}
                   socialLinks={creator.socialLinks}
                   className="w-full"
+                  hoverBorderColor={hoverBorderColors[index % hoverBorderColors.length]}
                 />
               </div>
             ))}

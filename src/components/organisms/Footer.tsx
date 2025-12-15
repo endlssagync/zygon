@@ -11,7 +11,7 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
       { label: 'About Us', href: '/#about' },
       { label: 'Services', href: '/#services' },
       { label: 'Talent', href: '/talent' },
-      { label: 'Contact', href: '/#contact' },
+      { label: 'Contact', href: '/contact' },
     ],
     legal: [
       { label: 'Privacy Policy', href: '#' },

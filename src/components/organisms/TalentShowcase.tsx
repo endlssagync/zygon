@@ -66,7 +66,13 @@ export const TalentShowcase: React.FC<TalentShowcaseProps> = ({ className = '' }
             opacity: 0,
           }}
         >
-          <Link to="/talent">
+          <Link 
+            to="/talent"
+            onClick={() => {
+              // Scroll to top when navigating to talent page
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
             <Button variant="primary">View Full Talent Roster</Button>
           </Link>
         </div>

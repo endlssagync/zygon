@@ -15,6 +15,7 @@ export interface TalentCardProps {
   image?: string;
   className?: string;
   socialLinks?: SocialLinks;
+  hoverBorderColor?: string;
 }
 
 export const TalentCard: React.FC<TalentCardProps> = ({ 
@@ -22,7 +23,8 @@ export const TalentCard: React.FC<TalentCardProps> = ({
   followers, 
   image, 
   className = '',
-  socialLinks 
+  socialLinks,
+  hoverBorderColor 
 }) => {
   // Format followers with commas and add + sign
   const formatFollowers = (count: number): string => {
@@ -65,7 +67,19 @@ export const TalentCard: React.FC<TalentCardProps> = ({
   return (
     <div
       className={cardClassName}
-      style={getCardStyles()}
+      style={{
+        ...getCardStyles(),
+        border: '2px solid transparent',
+        transition: 'border-color 0.3s ease-in-out',
+      }}
+      onMouseEnter={(e) => {
+        if (hoverBorderColor) {
+          e.currentTarget.style.borderColor = hoverBorderColor;
+        }
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = 'transparent';
+      }}
     >
       {/* Background Image or Placeholder */}
       {image ? (
