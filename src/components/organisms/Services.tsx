@@ -11,24 +11,28 @@ export const Services: React.FC<ServicesProps> = ({ className = '' }) => {
       title: 'Talent-Brand Connections',
       description: 'We connect talented creators with premium brands for authentic partnerships that drive results.',
       icon: Star,
+      image: '/services-graphics/talent-brand-connections.jpg',
       details: 'Zygon specializes in connecting the right talent with the right brands. We leverage our extensive network and strategic insights to create partnerships that align with brand values and creator audiences. Our matchmaking process ensures authentic collaborations that maximize opportunity and deliver world-class results for both parties.',
     },
     {
       title: 'Brand Partnership Management',
       description: 'Comprehensive partnership development and management from strategy to execution.',
       icon: Handshake,
+      image: '/services-graphics/brand-partnership-management.jpg',
       details: 'We build lasting partnerships between creators and brands through clarity, structure, and high-value strategy. Our team handles every aspect of partnership management, from initial connection to campaign execution and performance analysis. We ensure each collaboration elevates the brand while empowering the creator with meaningful opportunities.',
     },
     {
       title: 'Strategic Growth Planning',
       description: 'Data-driven strategies that drive growth and maximize opportunities for creators and brands.',
       icon: TrendingUp,
+      image: '/services-graphics/strategic-growth-planning.jpg',
       details: 'Through strategic planning and data-driven insights, we identify opportunities that drive growth for both creators and brands. Our approach combines industry expertise with clear structure to unlock new possibilities and accelerate success. We create actionable roadmaps that transform potential into measurable results.',
     },
     {
       title: 'Partnership Optimization',
       description: 'Strategic planning and execution support to ensure partnerships deliver maximum value.',
       icon: Film,
+      image: '/services-graphics/partnership-optimization.jpg',
       details: 'We optimize every partnership to ensure it delivers world-class results. Our team provides strategic guidance throughout the collaboration process, helping creators and brands align their goals and execute campaigns that resonate with audiences. We focus on maximizing opportunity and building relationships that last.',
     },
   ];
@@ -98,10 +102,15 @@ export const Services: React.FC<ServicesProps> = ({ className = '' }) => {
               // WHAT WE DO
             </div>
             <h3
-              className="text-3xl md:text-4xl lg:text-5xl font-light"
-              style={{ color: '#FFFFFF', letterSpacing: '-0.025em' }}
+              className="text-3xl md:text-4xl lg:text-5xl font-light transition-all duration-300 ease-in-out"
+              style={{
+                color: '#FFFFFF',
+                letterSpacing: '-0.025em',
+                opacity: isTransitioning ? 0 : 1,
+                transform: isTransitioning ? 'translateY(10px)' : 'translateY(0)',
+              }}
             >
-              Connecting Talent with Brands
+              {activeService.title}
             </h3>
             <p
               className="text-base md:text-lg leading-relaxed transition-all duration-300 ease-in-out"
@@ -117,16 +126,18 @@ export const Services: React.FC<ServicesProps> = ({ className = '' }) => {
 
           {/* Right Column - Rotating Content */}
           <div className="relative">
-            {/* Placeholder Image */}
-            <div
-              className="w-full aspect-square rounded-2xl overflow-hidden"
-              style={{
-                background: 'linear-gradient(to bottom, rgb(82, 82, 82) 0%, rgb(255, 255, 255) 100%)',
-                transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out',
-                opacity: isTransitioning ? 0 : 1,
-                transform: isTransitioning ? 'scale(0.98)' : 'scale(1)',
-              }}
-            />
+            {/* Service Image */}
+            <div className="w-full aspect-square rounded-2xl overflow-hidden">
+              <img
+                src={activeService.image}
+                alt={activeService.title}
+                className="w-full h-full object-cover transition-all duration-300 ease-in-out"
+                style={{
+                  opacity: isTransitioning ? 0 : 1,
+                  transform: isTransitioning ? 'scale(0.98)' : 'scale(1)',
+                }}
+              />
+            </div>
 
             {/* Motion Line Indicator */}
             <div className="flex items-center justify-center gap-2 mt-8">
