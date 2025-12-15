@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '../atoms/Button';
 import { Workflow, TrendingUp, FileCheck, Rocket } from 'lucide-react';
 import { GeometricBackground } from '../ui/geometric-background';
 

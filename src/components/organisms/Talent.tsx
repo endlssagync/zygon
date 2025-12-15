@@ -200,3 +200,4 @@ export const Talent: React.FC = () => {
   );
 };
 
+

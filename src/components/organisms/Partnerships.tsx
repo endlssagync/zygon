@@ -52,3 +52,4 @@ export const Partnerships: React.FC<PartnershipsProps> = ({ className = '' }) =>
   );
 };
 
+

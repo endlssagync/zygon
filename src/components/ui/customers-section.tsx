@@ -1,8 +1,8 @@
-import React from "react"
 import { ChevronRight } from "lucide-react"
 import { AnimatedGroup } from "@/components/ui/animated-group"
+import { Variants } from "framer-motion"
 
-const transitionVariants = {
+const transitionVariants: { item: Variants } = {
   item: {
     hidden: {
       opacity: 0,
@@ -14,7 +14,7 @@ const transitionVariants = {
       filter: "blur(0px)",
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         bounce: 0.3,
         duration: 1.5,
       },

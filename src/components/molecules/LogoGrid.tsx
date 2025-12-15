@@ -43,3 +43,4 @@ export const LogoGrid: React.FC<LogoGridProps> = ({ logos, className = '' }) => 
   );
 };
 
+
