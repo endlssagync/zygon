@@ -1,55 +1,57 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/organisms/Header';
 import { Hero } from './components/organisms/Hero';
-import { CustomersSection } from './components/ui/customers-section';
+// Temporarily commented out until brand logos are ready
+// import { CustomersSection } from './components/ui/customers-section';
 import { Services } from './components/organisms/Services';
 import { About } from './components/organisms/About';
 import { TalentShowcase } from './components/organisms/TalentShowcase';
 import { Footer } from './components/organisms/Footer';
 import { Talent } from './components/organisms/Talent';
 
-const customers = [
-  {
-    src: "/coinbase-logo.svg",
-    alt: "Coinbase Logo",
-    height: 20,
-  },
-  {
-    src: "/coinbase-logo.svg",
-    alt: "Coinbase Logo",
-    height: 16,
-  },
-  {
-    src: "/coinbase-logo.svg",
-    alt: "Coinbase Logo",
-    height: 16,
-  },
-  {
-    src: "/coinbase-logo.svg",
-    alt: "Coinbase Logo",
-    height: 20,
-  },
-  {
-    src: "/coinbase-logo.svg",
-    alt: "Coinbase Logo",
-    height: 20,
-  },
-  {
-    src: "/coinbase-logo.svg",
-    alt: "Coinbase Logo",
-    height: 16,
-  },
-  {
-    src: "/coinbase-logo.svg",
-    alt: "Coinbase Logo",
-    height: 28,
-  },
-  {
-    src: "/coinbase-logo.svg",
-    alt: "Coinbase Logo",
-    height: 24,
-  },
-];
+// Temporarily commented out until brand logos are ready
+// const customers = [
+//   {
+//     src: "/coinbase-logo.svg",
+//     alt: "Coinbase Logo",
+//     height: 20,
+//   },
+//   {
+//     src: "/coinbase-logo.svg",
+//     alt: "Coinbase Logo",
+//     height: 16,
+//   },
+//   {
+//     src: "/coinbase-logo.svg",
+//     alt: "Coinbase Logo",
+//     height: 16,
+//   },
+//   {
+//     src: "/coinbase-logo.svg",
+//     alt: "Coinbase Logo",
+//     height: 20,
+//   },
+//   {
+//     src: "/coinbase-logo.svg",
+//     alt: "Coinbase Logo",
+//     height: 20,
+//   },
+//   {
+//     src: "/coinbase-logo.svg",
+//     alt: "Coinbase Logo",
+//     height: 16,
+//   },
+//   {
+//     src: "/coinbase-logo.svg",
+//     alt: "Coinbase Logo",
+//     height: 28,
+//   },
+//   {
+//     src: "/coinbase-logo.svg",
+//     alt: "Coinbase Logo",
+//     height: 24,
+//   },
+// ];
 
 function HomePage() {
   return (

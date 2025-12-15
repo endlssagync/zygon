@@ -7,16 +7,17 @@ export interface AboutProps {
 }
 
 export const About: React.FC<AboutProps> = ({ className = '' }) => {
+  // Temporarily commented out until brand logos are ready
   // Logo placeholders - using same SVG as customers section
-  const leftLogos = [
-    { name: 'Asana', src: '/coinbase-logo.svg' },
-    { name: 'Framer', src: '/coinbase-logo.svg' },
-  ];
+  // const leftLogos = [
+  //   { name: 'Asana', src: '/coinbase-logo.svg' },
+  //   { name: 'Framer', src: '/coinbase-logo.svg' },
+  // ];
 
-  const rightLogos = [
-    { name: 'Coinbase', src: '/coinbase-logo.svg' },
-    { name: 'Slack', src: '/coinbase-logo.svg' },
-  ];
+  // const rightLogos = [
+  //   { name: 'Coinbase', src: '/coinbase-logo.svg' },
+  //   { name: 'Slack', src: '/coinbase-logo.svg' },
+  // ];
 
   const middleFeatures = [
     {
