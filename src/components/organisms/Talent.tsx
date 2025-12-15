@@ -134,10 +134,10 @@ export const Talent: React.FC = () => {
 
   // Array of colors for hover borders - cycling through red, green, blue, yellow
   const hoverBorderColors = [
-    '#EF4444', // red
-    '#10B981', // green
-    '#0EA5E9', // blue
-    '#FACC15', // yellow
+    'rgb(255, 0, 0)', // red
+    'rgb(0, 255, 0)', // green
+    'rgb(0, 0, 255)', // blue
+    'rgb(255, 255, 0)', // yellow
   ];
 
   return (

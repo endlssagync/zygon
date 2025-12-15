@@ -34,6 +34,12 @@ function ElegantShape({
                 ease: [0.23, 0.86, 0.39, 0.96],
                 opacity: { duration: 1.2 },
             }}
+            style={{
+                transform: 'translateZ(0)',
+                willChange: 'transform, opacity',
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+            }}
             className={cn("absolute", className)}
         >
             <motion.div
@@ -48,6 +54,10 @@ function ElegantShape({
                 style={{
                     width,
                     height,
+                    transform: 'translateZ(0)',
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
                 }}
                 className="relative"
             >
@@ -61,6 +71,12 @@ function ElegantShape({
                         "after:absolute after:inset-0 after:rounded-full",
                         "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2),transparent_70%)]"
                     )}
+                    style={{
+                        transform: 'translateZ(0)',
+                        willChange: 'transform',
+                        backfaceVisibility: 'hidden',
+                        WebkitBackfaceVisibility: 'hidden',
+                    }}
                 />
             </motion.div>
         </motion.div>
@@ -69,9 +85,24 @@ function ElegantShape({
 
 export function GeometricBackground() {
     return (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div 
+            className="absolute inset-0 overflow-hidden pointer-events-none"
+            style={{
+                transform: 'translateZ(0)',
+                willChange: 'transform',
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+                isolation: 'isolate',
+            }}
+        >
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
+            <div 
+                className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl"
+                style={{
+                    transform: 'translateZ(0)',
+                    willChange: 'transform',
+                }}
+            />
 
             {/* Animated shapes */}
             <ElegantShape
@@ -120,7 +151,13 @@ export function GeometricBackground() {
             />
 
             {/* Final gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
+            <div 
+                className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none"
+                style={{
+                    transform: 'translateZ(0)',
+                    willChange: 'transform',
+                }}
+            />
         </div>
     );
 }
